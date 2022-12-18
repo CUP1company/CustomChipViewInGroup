@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="Отметьте то, что вам интересно,чтобы настроить Дзен"
+        android:textColor="@color/textColorTop"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/style_btn_later"
+        android:paddingStart="13dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="11dp"
+        android:text="Позже"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/contentScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/goNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoriesGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp">
+
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Литература" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Комиксы" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Сериалы" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Работа" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Рецепты" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Игры" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Техника" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Математика" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Новости" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Спорт" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Автомобили" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Прогулки" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Рестораны" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Кино" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Юмор" />
+
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Коффе" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Чай" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Удали Android Studio" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="VK - company" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Дебилы" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Компьюторы" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Фрукты" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Овощи" />
+            <com.project.vk_cup_1.custom_view.ChipView
+                android:id="@+id/chip25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:containerDisSelected="@drawable/chip_background"
+                app:containerSelected="@drawable/chip_background_selected"
+                app:imageSrc="@drawable/ic_chip_add"
+                app:imageSrcSelected="@drawable/ic_chip_done"
+                app:selectedState="false"
+                app:text="Напитки" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/goNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_nextbtn"
+        android:paddingStart="50dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="30dp"
+        android:layout_marginBottom="68dp"
+        android:text="Продолжить"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
